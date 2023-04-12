@@ -1,0 +1,29 @@
+<p>guest-list works!</p>
+<div class="container my-5">
+    <h1 class="mb-3">Guest</h1>
+    <table class="table" *ngIf="guest && guest.length > 0">
+       <thead> 
+         <tr>
+            <th>Guest_Id</th>
+            <th>Email</th>
+            <th>Guest_Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>Phone_Number</th>
+         </tr>
+       </thead> 
+       <tbody><tr *ngFor="let g of guest">
+            <td>{{g.Guest_Id}}</td>
+            <td>{{g.Email}}</td>
+            <td>{{g.Guest_Name}}</td>
+            <td>{{g.Guest_Id}}</td>
+            <td>{{g.Gender}}</td>
+            <td>{{g.Address}}</td>
+            <td>{{g.Phone_Number}}</td>
+            <!-- <td><a [routerLink]="['/guest',r.guest_id]">View</a></td> -->
+           </tr>
+        </tbody>
+       </table>
+       <p *ngIf="!guest || guest.length<=0">No Guest Found</p>
+       
+   </div>
