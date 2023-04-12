@@ -1,0 +1,16 @@
+<div class="container my-5">
+  <h1 class="mb-3">Add New Bill</h1>
+ <div class="row">
+ <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="AddBillAsync()">
+    <div class="form-group">
+      <label for="Stay_Dates">Stay_Dates</label>
+      <input type="date" class="form-control" id="Stay_Dates" placeholder="Enter Date">
+    </div>
+    <div class="form-group">
+        <label for="Total_bill">Total_bill</label>
+        <input type="number" class="form-control" id="Total_bill" placeholder="Enter Total Bill">
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> 
+</div>

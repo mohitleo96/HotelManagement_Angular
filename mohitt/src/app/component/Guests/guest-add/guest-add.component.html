@@ -1,0 +1,29 @@
+<div class="container my-5">
+  <h1 class="mb-3">Add New Guest</h1>
+ <div class="row">
+ <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="AddGuestAsync()">
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter mailID">
+        </div>
+        <div class="form-group">
+            <label for="Guest_Name">Guest_Name</label>
+            <input type="text" class="form-control" id="Guest_Name" placeholder="Enter Guest_Name">
+          </div>
+          <div class="form-group">
+            <label for="Gender">Gender</label>
+            <input type="text" class="form-control" id="Gender" placeholder="Male or Female">
+          </div>
+          <div class="form-group">
+              <label for="Address">Address</label>
+              <input type="text" class="form-control" id="Address" placeholder="Enter Address">
+            </div>
+            <div class="form-group">
+                <label for="Phone_Number">Phone_Number</label>
+                <input type="number" class="form-control" id="Phone_Number" placeholder="Enter Phone Number">
+              </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> 
+    </div>
+    

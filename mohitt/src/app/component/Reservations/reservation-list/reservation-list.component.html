@@ -1,0 +1,31 @@
+<p>reservation-list works!</p>
+
+<div class="container my-5">
+    <h1 class="mb-3">Reservation</h1>
+    <table class="table" *ngIf="reservations && reservations.length >0">
+       <thead> 
+           <tr>
+           <th>Reservation_Id</th>
+            <th>No._Of_Adults</th>
+             <th>No._Of_Children</th>
+             <th>Check_Out</th>
+            <th>Check_In</th>
+             <th>Status</th>
+             <th>No_Of_Nights</th>
+           </tr>
+       </thead> 
+       <tbody><tr *ngFor="let res of reservations">
+           <td>{{res.Reservation_Id}}</td>
+            <td>{{res.Number_Of_Adults}}</td>
+            <td>{{res.Number_Of_Children}}</td>
+            <td>{{res.Check_Out}}</td>
+            <td>{{res.Check_In}}</td>
+            <td>{{res.Status}}</td>
+            <td>{{res.Number_Of_Nights}}</td>
+            <!-- <td><a [routerLink]="['/reservation',r.reservation_id]">View</a></td> -->
+           </tr>
+        </tbody>
+       </table>
+       <p>{{msg}}</p>
+       
+   </div>

@@ -1,0 +1,24 @@
+
+<div class="container my-5">
+ <h1 class="mb-3">Add New Guest</h1>
+<div class="row">
+<div class="col-6">
+    <!--This is here method we are calling in add-guest.component.html  -->
+     <form #form="ngForm" (ngSubmit)="AddRoomAsync()">
+         <div class="mb-3">
+             <label for="roomrate" class="form-label"> Room_Rate</label>
+             <input type="number" class="form-control" id="roomrate" name="room_rate" [(ngModel)]="addRoomRequest.Room_Rate">
+            </div>
+            <div class="mb-3">
+            <label for="room_status" class="form-label">Room_Status</label>
+            <select id="gender" name="gender">
+                 <option value="male">true</option>
+                     <option value="female">false</option>
+                 </select>
+                     </div>
+                     <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+

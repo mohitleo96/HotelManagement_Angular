@@ -1,0 +1,23 @@
+<p>room-edit works!</p>
+<div class="container my-5">
+    <h1 class="mb-3"> Edit room </h1>
+     <div class="row">
+         <div class="col-6">
+            <!--This is here method we are calling in add-room .component.html  --> 
+          <form #form="ngForm" (ngSubmit)="UpdateRoomAsync()" >
+            <div class="mb-3">
+                 <label for="id" class="form-label">room_Id</label> 
+                  <input type="text" class="form-control" id="id" readonly name="id"  [(ngModel)]="roomDetails.room_id">
+                </div>
+                <div class="mb-3"> 
+                     <label for="email" class="form-label">Room_Rate</label>
+                      <input type="email" class="form-control" id="email" name="email" [(ngModel)]="roomDetails.room_rate"></div>
+                      <div class="mb-3"> 
+                        <label for="email" class="form-label">RoomStatus</label>
+                     <input type="name" class="form-control" id="name" name="name" [(ngModel)]="roomDetails.room_status"></div>
+                     <button type="submit" class="btn btn-primary">Save</button>
+                     <button type="button" class="btn btn-danger" (click)="DeleteRoomAsync(roomDetails.room_id)">Delete</button>
+                </form>
+            </div>
+            </div>
+            </div>

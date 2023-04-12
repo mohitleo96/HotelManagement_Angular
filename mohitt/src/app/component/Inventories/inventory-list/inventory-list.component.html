@@ -1,0 +1,23 @@
+<p>inventory-list works!</p>
+
+<div class="container my-5">
+    <h1 class="mb-3">Inventory</h1>
+    <table class="table" *ngIf="inventories && inventories.length >0">
+       <thead> 
+           <tr>
+           <th>Inventory_Id</th>
+            <th>Inventory_Name</th>
+             <th>Quantity</th>
+           </tr>
+       </thead> 
+       <tbody><tr *ngFor="let inv of inventories">
+           <td>{{inv.Inventory_Id}}</td>
+            <td>{{inv.Inventory_Name}}</td>
+            <td>{{inv.Quantity}}</td>
+            <!-- <td><a [routerLink]="['/inventory',r.inventory_id]">View</a></td> -->
+           </tr>
+        </tbody>
+       </table>
+       <p>{{msg}}</p>
+       
+   </div>
